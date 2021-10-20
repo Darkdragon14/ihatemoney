@@ -17,3 +17,7 @@ ihatemoney/budget.db
 .idea
 .python-version
 
+pyvenv.cfg
+ihatemoney/lib
+ihatemoney/bin
+ihatemoney.cfg
