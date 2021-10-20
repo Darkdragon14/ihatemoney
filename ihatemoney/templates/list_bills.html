@@ -111,7 +111,11 @@
             </thead>
         <tbody>
         {% for bill in bills.items %}
-        <tr owers="{{bill.owers|join(',','id')}}" payer="{{bill.payer.id}}">
+            {% if bill.check %}
+            <tr class="check-bill" owers="{{bill.owers|join(',','id')}}" payer="{{bill.payer.id}}">
+            {%- else -%}
+            <tr owers="{{bill.owers|join(',','id')}}" payer="{{bill.payer.id}}">
+            {%- endif %}
                 <td>
                     <span data-toggle="tooltip" data-placement="top"
                         title="{{ _('Added on %(date)s', date=bill.creation_date|dateformat("long") if bill.creation_date else bill.date|dateformat("long")) }}">

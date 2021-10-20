@@ -276,6 +276,7 @@ class Project(db.Model):
                     "payer_name": Person.query.get(bill.payer_id).name,
                     "payer_weight": Person.query.get(bill.payer_id).weight,
                     "owers": owers,
+                    "checks": bill.check,
                 }
             )
         return pretty_bills
@@ -426,11 +427,11 @@ class Project(db.Model):
         db.session.commit()
 
         operations = (
-            ("Georg", 200, ("Amina", "Georg", "Alice"), "Food shopping"),
-            ("Alice", 20, ("Amina", "Alice"), "Beer !"),
-            ("Amina", 50, ("Amina", "Alice", "Georg"), "AMAP"),
+            ("Georg", 200, ("Amina", "Georg", "Alice"), "Food shopping", False),
+            ("Alice", 20, ("Amina", "Alice"), "Beer !", True),
+            ("Amina", 50, ("Amina", "Alice", "Georg"), "AMAP", False),
         )
-        for (payer, amount, owers, subject) in operations:
+        for (payer, amount, owers, subject, check) in operations:
             bill = Bill()
             bill.payer_id = members[payer].id
             bill.what = subject
@@ -438,6 +439,7 @@ class Project(db.Model):
             bill.amount = amount
             bill.original_currency = "XXX"
             bill.converted_amount = amount
+            bill.check = check
 
             db.session.add(bill)
 
@@ -554,6 +556,8 @@ class Bill(db.Model):
     original_currency = db.Column(db.String(3))
     converted_amount = db.Column(db.Float)
 
+    check = db.Column(db.Boolean, default=False)
+
     archive = db.Column(db.Integer, db.ForeignKey("archive.id"))
 
     @property
@@ -569,6 +573,7 @@ class Bill(db.Model):
             "external_link": self.external_link,
             "original_currency": self.original_currency,
             "converted_amount": self.converted_amount,
+            "check": self.check,
         }
 
     def pay_each_default(self, amount):
