@@ -304,6 +304,12 @@ msgstr ""
 msgid "The bill has been modified"
 msgstr ""
 
+msgid "The bill has not been updated"
+msgstr ""
+
+msgid "The bill has been updated"
+msgstr ""
+
 msgid "Error deleting project history"
 msgstr ""
 
@@ -314,6 +320,364 @@ msgid "Error deleting recorded IP addresses"
 msgstr ""
 
 msgid "Deleted recorded IP addresses in project history."
+msgstr ""
+
+msgid "{editor}: Editing failed"
+msgstr ""
+
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+msgid ""
+"Click will abort further execution because Python was configured to use "
+"ASCII as encoding for the environment. Consult "
+"https://click.palletsprojects.com/unicode-support/ for mitigation steps."
+msgstr ""
+
+msgid ""
+"Additional information: on this system no suitable UTF-8 locales were "
+"discovered. This most likely requires resolving by reconfiguring the "
+"locale system."
+msgstr ""
+
+msgid ""
+"This system supports the C.UTF-8 locale which is recommended. You might "
+"be able to resolve your issue by exporting the following environment "
+"variables:"
+msgstr ""
+
+msgid ""
+"This system lists some UTF-8 supporting locales that you can pick from. "
+"The following suitable locales were discovered: {locales}"
+msgstr ""
+
+msgid ""
+"Click discovered that you exported a UTF-8 locale but the locale system "
+"could not pick up from it because it does not exist. The exported locale "
+"is {locale!r} but it is not supported."
+msgstr ""
+
+msgid "Aborted!"
+msgstr ""
+
+msgid "Show this message and exit."
+msgstr ""
+
+msgid "(Deprecated) {text}"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+msgid "Commands"
+msgstr ""
+
+msgid "Missing command."
+msgstr ""
+
+msgid "No such command {name!r}."
+msgstr ""
+
+msgid "Value must be an iterable."
+msgstr ""
+
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "env var: {var}"
+msgstr ""
+
+msgid "(dynamic)"
+msgstr ""
+
+msgid "default: {default}"
+msgstr ""
+
+msgid "required"
+msgstr ""
+
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+msgid "Show the version and exit."
+msgstr ""
+
+msgid "Error: {message}"
+msgstr ""
+
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+msgid "Invalid value: {message}"
+msgstr ""
+
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+msgid "Missing argument"
+msgstr ""
+
+msgid "Missing option"
+msgstr ""
+
+msgid "Missing parameter"
+msgstr ""
+
+msgid "Missing {param_type}"
+msgstr ""
+
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+msgid "No such option: {name}"
+msgstr ""
+
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "unknown error"
+msgstr ""
+
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+msgid "Repeat for confirmation"
+msgstr ""
+
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+msgid "Error: {e.message}"
+msgstr ""
+
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+msgid "Error: invalid input"
+msgstr ""
+
+msgid "Press any key to continue..."
+msgstr ""
+
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+msgid "file"
+msgstr ""
+
+msgid "directory"
+msgstr ""
+
+msgid "path"
+msgstr ""
+
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "This field is required."
+msgstr ""
+
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+msgid "File does not have an approved extension."
+msgstr ""
+
+msgid "File must be between {min_size} and {max_size} bytes."
+msgstr ""
+
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+msgid "Invalid input."
+msgstr ""
+
+msgid "Invalid email address."
+msgstr ""
+
+msgid "Invalid IP address."
+msgstr ""
+
+msgid "Invalid Mac address."
+msgstr ""
+
+msgid "Invalid URL."
+msgstr ""
+
+msgid "Invalid UUID."
+msgstr ""
+
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+msgid "Invalid CSRF Token"
+msgstr ""
+
+msgid "CSRF token missing"
+msgstr ""
+
+msgid "CSRF failed"
+msgstr ""
+
+msgid "CSRF token expired"
+msgstr ""
+
+msgid "Not a valid choice"
+msgstr ""
+
+msgid "Not a valid list"
+msgstr ""
+
+msgid "Not a valid integer list"
+msgstr ""
+
+msgid "Please input a date/time value"
+msgstr ""
+
+msgid "Invalid date/time input"
+msgstr ""
+
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+msgid "Not a valid integer value"
+msgstr ""
+
+msgid "Not a valid decimal value"
+msgstr ""
+
+msgid "Not a valid float value"
+msgstr ""
+
+msgid "Not a valid datetime value"
+msgstr ""
+
+msgid "Not a valid date value"
+msgstr ""
+
+msgid "Not a valid time value"
 msgstr ""
 
 msgid "Sorry, we were unable to find the page you've asked for."
@@ -785,6 +1149,12 @@ msgstr ""
 
 #, python-format
 msgid "Everyone but %(excluded)s"
+msgstr ""
+
+msgid "uncheck"
+msgstr ""
+
+msgid "check"
 msgstr ""
 
 msgid "No bills"

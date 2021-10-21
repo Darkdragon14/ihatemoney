@@ -12,6 +12,7 @@ from datetime import datetime
 from functools import wraps
 import json
 import os
+import operator
 
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
@@ -831,6 +832,25 @@ def settle_bill():
     """Compute the sum each one have to pay to each other and display it"""
     bills = g.project.get_transactions_to_settle_bill()
     return render_template("settle_bills.html", bills=bills, current_view="settle_bill")
+
+@main.route("/<project_id>/check/<int:bill_id>", methods=["POST"])
+def check_bill(bill_id):
+    form = EmptyForm()
+    if not form.validate():
+        flash(format_form_errors(form, _("Error deleting bill")), category="danger")
+        return redirect(url_for(".list_bills"))
+
+    bill = Bill.query.get(g.project, bill_id)
+    bill.check = operator.not_(bill.check)
+    if not bill:
+        flash(_("The bill has not been updated", category="danger"))
+        return redirect(url_for(".list_bills"))
+
+    db.session.commit()
+    flash(_("The bill has been updated"))
+
+    return redirect(url_for(".list_bills"))
+
 
 
 @main.route("/<project_id>/history")
