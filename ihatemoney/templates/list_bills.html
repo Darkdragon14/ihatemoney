@@ -138,6 +138,14 @@
                     </span>
                 </td>
                 <td class="bill-actions">
+                    <form action="{{ url_for(".check_bill", bill_id=bill.id) }}" method="POST">
+                        {{ csrf_form.csrf_token }}
+                        {% if bill.check %}
+                            <button class="action uncheck" type="submit" title="{{ _("uncheck") }}"></button>
+                        {%- else -%}
+                            <button class="action check" type="submit" title="{{ _("check") }}"></button>
+                        {%- endif %}
+                    </form>
                     <a class="edit" href="{{ url_for(".edit_bill", bill_id=bill.id) }}" title="{{ _("edit") }}">{{ _('edit') }}</a>
                     <form action="{{ url_for(".delete_bill", bill_id=bill.id) }}" method="POST">
                         {{ csrf_form.csrf_token }}
